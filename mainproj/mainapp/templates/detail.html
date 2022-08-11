@@ -1,0 +1,13 @@
+<h1>상세페이지</h1>
+<h2>제목: {{ post.title }}</h2>
+
+<div>
+    <img src="{{ post.image.url }}" alt="" height="200">
+</div>
+
+
+<h3>날짜</h3>
+{{ post.date | date:'Y-m-d'}}
+
+<h3>내용</h3>
+{{ post.content }}
