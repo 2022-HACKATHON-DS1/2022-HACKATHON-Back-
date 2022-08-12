@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="https://kit.fontawesome.com/1c941d1499.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navBox">
+      <div class="Logo">dlstodsozjt</div>
+      <i class="fa-solid fa-bars fa-2x"></i>
+    </div>
+    <form class="main" action="" method="POST" enctype="multipart/form-data">
+      <div class="uploadBtn_div">
+        <input class="uploadBtn" type="submit" value="게시">
+    
+      </div>
+      {% csrf_token %}
+        
+        {{ form.title }}
+        
+        {{ form.image }}
+      
+        <div class="uploadMenu">
+          <div class="menuPlace">
+            <i class="fa-solid fa-location-dot fa-2x"></i>
+            <span class="menuPlaceLetter">위치</span>
+          </div>
+          <div class="menuTag">
+            <i class="fa-solid fa-tag fa-2x"></i>
+            <span class="menuTagLetter">태그</span>
+          </div>
+          <div class="menuDate" value="space" onclick="calendar()">
+            <i class="fa-solid fa-calendar-days fa-2x"></i>
+            <span class="menuDateLetter">날짜</span>{{ form.date }}
+          </div>
+        </div>
+        
+        {{ form.content }}
+        
+      </div>
+    </form>
+  </div>
+  <script src="{% static 'js/upload.js' %}"></script>
+</body>
+</html>
+
+
+
