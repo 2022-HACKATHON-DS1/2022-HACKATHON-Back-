@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
+
 {% block content %} 
+ 
     <form class="main" action="" method="POST" enctype="multipart/form-data">
       <div class="uploadBtn_div">
         <input class="uploadBtn" type="submit" value="게시">
@@ -18,7 +20,7 @@
             <i class="fa-solid fa-tag fa-2x"></i>
             <span class="menuTagLetter">태그</span>
           </div>
-          <div class="menuDate" value="space" onclick="calendar()">
+          <div class="menuDate" value="space">
             <i class="fa-solid fa-calendar-days fa-2x"></i>
             <span class="menuDateLetter">날짜</span>{{ form.date }}
           </div>
@@ -27,6 +29,7 @@
         {{ form.image }}
         {{ form.content }}
     </form>
+    
     {% endblock %}
  
 
