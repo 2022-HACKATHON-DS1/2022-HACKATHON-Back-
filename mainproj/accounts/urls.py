@@ -8,6 +8,6 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('', views.login, name='login'),
     path('home/', mainapp_views.home, name='home'),
-
+    
 ]  
     
