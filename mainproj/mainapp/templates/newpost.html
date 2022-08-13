@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,28 +8,39 @@
   <title></title>
   <script src="https://kit.fontawesome.com/1c941d1499.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/drop.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lilita One' rel='stylesheet'>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 <body>
   <div class="container">
     <div class="navBox">
-      <div class="Logo">dlstodsozjt</div>
-      <i class="fa-solid fa-bars fa-2x"></i>
+      <div class="Logo">Dlstodsozjt</div>
+      <i class="fa-solid fa-bars fa-2x" id="drop"></i>
+                    <div class="dropdown">
+                        <i class="fa-solid fa-caret-left"></i>
+                        <li class="drop-box"><a href="{% url 'newpost' %}" style="text-decoration: none; color:#fff">새 글 작성</a></li>
+                        <li class="drop-box"><a href="{% url 'mypage' %}" style="text-decoration: none; color:#fff">마이페이지</a></li>
+                        <li class="drop-box"><a href="{% url 'map' %}" style="text-decoration: none; color:#fff">사진관 찾기</a></li>
+                        <li class="drop-box"><a href="" style="text-decoration: none; color:#fff">이벤트</a></li>
+                    </div>
     </div>
+
+    
     <form class="main" action="" method="POST" enctype="multipart/form-data">
       <div class="uploadBtn_div">
         <input class="uploadBtn" type="submit" value="게시">
-    
       </div>
       {% csrf_token %}
         
         {{ form.title }}
         
-        {{ form.image }}
-      
         <div class="uploadMenu">
+         
           <div class="menuPlace">
             <i class="fa-solid fa-location-dot fa-2x"></i>
             <span class="menuPlaceLetter">위치</span>
@@ -42,14 +53,14 @@
             <i class="fa-solid fa-calendar-days fa-2x"></i>
             <span class="menuDateLetter">날짜</span>{{ form.date }}
           </div>
+          
         </div>
-        
+        {{ form.image }}
         {{ form.content }}
-        
-      </div>
     </form>
   </div>
   <script src="{% static 'js/upload.js' %}"></script>
+  <script src="{% static 'js/drop.js' %}"></script>
 </body>
 </html>
 

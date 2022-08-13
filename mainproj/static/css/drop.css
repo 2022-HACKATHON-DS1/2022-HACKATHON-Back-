@@ -1,0 +1,37 @@
+.dropdown{
+    display: none;
+    position: absolute;
+    left: 820px;
+    top: 41px;
+
+}
+
+.dropdown li{
+    background-color: #6D70D7;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2px;
+    list-style-type: none;
+    width: 90px;
+    padding: 3px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+
+.dis{
+    display: block;
+}
+
+.fa-caret-left{
+    font-size: 20px;
+    position: absolute;
+    display: inline;
+    left: 105px;
+    top: 2px;
+}

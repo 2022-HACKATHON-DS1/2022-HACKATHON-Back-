@@ -32,7 +32,7 @@ class PostModelForm(forms.ModelForm):
             'content' : forms.Textarea(
                 attrs={
                     'class':'uploadTextarea',
-                    'placeholder': '본문에 해쉬태그를 이용하여 태그를 사용해보세요! (최대 30개)'
+                    'placeholder': '본문에 해쉬태그를 이용하여 태그를 사용해보세요! (최대 30개)',
                 }
             ),
         }
