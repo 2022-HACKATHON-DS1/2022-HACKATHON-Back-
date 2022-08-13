@@ -33,3 +33,6 @@ def postformcreate(request):
     else:
         form = PostModelForm()
     return render(request, 'newpost.html', {'form' :form})
+
+def event(request):
+    return render(request, 'event.html')
